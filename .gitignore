@@ -2,7 +2,9 @@
 node_modules/
 
 # Production build files
-/dist
+dist/
+
+out/
 
 # OS generated files
 .DS_Store
