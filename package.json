@@ -1,8 +1,8 @@
 {
   "name": "chartviewr-app",
-  "productName": "chartviewr-app",
+  "productName": "Chartviewr",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "ChartViewr App is an Electron-based application that integrates with Alpaca Trade API to display real-time and historical stock data using lightweight charts.",
   "main": "src/index.cjs",
   "scripts": {
     "start": "electron .",

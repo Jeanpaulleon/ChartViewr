@@ -264,6 +264,9 @@ function debounce(func, delay) {
     
     if (addToWatchlistButton) {
         addToWatchlistButton.addEventListener('click', addToWatchlist);
+        newSymbol.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                addToWatchlist();}})
         console.log('Event listener attached');  // Confirm the listener is attached
     } else {
         console.log('Button not found');  // Error handling if button is not found
@@ -329,8 +332,12 @@ function debounce(func, delay) {
         
 if (addToWatchlistButton) {
     addToWatchlistButton.addEventListener('click', addToWatchlist);
-}
-}
+// Event listener for keypress on the newSymbol input
+    newSymbol.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addToWatchlist();
+        }
+    })}}
         
 };
 
