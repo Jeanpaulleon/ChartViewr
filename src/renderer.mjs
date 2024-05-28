@@ -57,20 +57,37 @@ document.getElementById('stockSymbol').addEventListener('change', startDataFetch
         });
     } else {
         console.log('Continue button not found');
-    }}
-// Check if elements specific to index.html exist
-    if (loginContainer && stockForm && appContainer) {
-    timeframeSelect.addEventListener('change', () => {
-        const symbol = stockSymbolInput.value.toUpperCase();
-        const startDate = startDateInput.value;
-        const endDate = endDateInput.value;
-        const timeframe = timeframeSelect.value;
     
-        // Call to load chart data with the new timeframe
-        if (symbol && startDate ) {
-            loadChartData(symbol, startDate, endDate, timeframe);
-        }
-    });
+
+    };
+
+      // LandingPage specific code
+      const startnowButton = document.getElementById('startnowButton'); // Assuming this ID for your continue button in landing.html
+      if (startnowButton) {
+          startnowButton.addEventListener('click', () => {
+              // Handle the continue button's logic here
+              console.log('Start Now button clicked');
+              // Possibly close window or load index.html depending on your setup
+          });
+      } else {
+          console.log('Start now button not found');
+      };
+
+
+  // Check if elements specific to index.html exist
+      if (loginContainer && stockForm && appContainer) {
+      timeframeSelect.addEventListener('change', () => {
+          const symbol = stockSymbolInput.value.toUpperCase();
+          const startDate = startDateInput.value;
+          const endDate = endDateInput.value;
+          const timeframe = timeframeSelect.value;
+      
+          // Call to load chart data with the new timeframe
+          if (symbol && startDate ) {
+              loadChartData(symbol, startDate, endDate, timeframe);
+          }
+      });
+
 
         stockSymbolInput.addEventListener('change', () => {
         const symbol = stockSymbolInput.value.toUpperCase();
@@ -156,7 +173,7 @@ if (localStorage.getItem('rememberKeys') === 'true') {
             width: chartContainer.clientWidth,
             height: chartContainer.clientHeight,
             layout: {
-                background: { color: '#222' },
+                background: { color: '#000022' },
                 textColor: '#DDD',
             },
             grid: {
@@ -485,7 +502,7 @@ function updateCountdown() {
 
 
 
-});
+}});
 
 
 window.onload = function () {

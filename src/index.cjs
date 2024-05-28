@@ -24,6 +24,34 @@ function createDisclaimerWindow() {
 }
 
 
+function createLandingWindow() {
+    if (mainWindow) {
+        mainWindow.close(); // Close the disclaimer window if open
+    }
+
+    mainWindow = new BrowserWindow({
+        width: 1040,
+        height: 720,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: true,
+            preload: path.join(__dirname, 'preload.mjs')
+        }
+    });
+
+    // Open the DevTools in development mode
+    if (process.env.NODE_ENV === 'development') {
+        mainWindow.webContents.openDevTools();
+    }
+
+    mainWindow.loadFile(path.join(__dirname, 'landingpage.html'));
+    mainWindow.on('closed', () => mainWindow = null);
+}
+
+ipcMain.on('continue-clicked', (event) => {
+    createLandingWindow(); // Create main window when continue is clicked
+});
+
 function createMainWindow() {
     if (mainWindow) {
         mainWindow.close(); // Close the disclaimer window if open
@@ -48,7 +76,7 @@ function createMainWindow() {
     mainWindow.on('closed', () => mainWindow = null);
 }
 
-ipcMain.on('continue-clicked', (event) => {
+ipcMain.on('startnow-clicked', (event) => {
     createMainWindow(); // Create main window when continue is clicked
 });
 

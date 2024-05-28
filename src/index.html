@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #373737;">
+<html lang="en" style="background-color: #000022;">
     <head style="color: #c1c1c1;">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ChartViewr</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body style="color: c1c1c1; background-color: #373737; display: flex; resize: both; align-self: flex-start;">
+    <body style="color: c1c1c1; background-color: #000022; display: flex; resize: both; align-self: flex-start;">
 
-        <div id="stockForm" style="display: block;top: 1px;bottom: 1px;position: fixed;right: 223px;left: 0.5px;background-color: #373737;color: #dadada;flex-wrap: wrap;justify-content: space-between;">
+        <div id="stockForm" style="display: block;top: 1px;bottom: 1px;position: fixed;right: 223px;left: 0.5px;background-color: #000022;color: #dadada;flex-wrap: wrap;justify-content: space-between;">
             <h2 style="background-position: center top; text-align: center;">Enter Stock Symbol and Date Range</h2>
             <form id="symbolDateForm">
                 <label for="stockSymbol">Symbol:</label>
@@ -22,6 +22,12 @@
                 <select id="timeframe" style="margin-top: 10px;">
                     <option value="1Min">1 Minute</option>
                     <option value="5Min">5 Minutes</option>
+                    <option value="15Min">15 Minutes</option>
+                    <option value="30Min">30 Minutes</option>
+                    <option value="1H">1 Hour</option>
+                    <option value="4H">4 Hour</option>
+                    <option value="1D">Daily</option>
+                    <option value="1W">Weekly</option>
                     <!-- Add more options as needed -->
                 </select>
             
@@ -29,7 +35,7 @@
             <canvas width="600" height="28" style="width: 600px; height: 28px; position: absolute; z-index: 2; left: 0px; top: 0px; align-self: center;"></canvas>
             <div id="chartTitle" style="text-align: center; color: white; font-size: 24px; padding: 10px;"></div>
             <div id="chartContainer">
-                <div id="watchlist" style="position: fixed; display: block; background-color: #373737; border-style: ridge; justify-content: space-between; flex-wrap: wrap; color: #dadada; border-color: #474747; bottom: 0; right: 0; margin-right: 1px; top: 0; margin-top: 1px; margin-bottom: 1px;">
+                <div id="watchlist" style="position: fixed; display: block; background-color: #000022; border-style: ridge; justify-content: space-between; flex-wrap: wrap; color: #dadada; border-color: #474747; bottom: 0; right: 0; margin-right: 1px; top: 0; margin-top: 1px; margin-bottom: 1px;">
                     <h3 style="color: #dadada; text-align: center;">Watchlist</h3>
                     <ul id="watchlistItems"></ul>
                     <input type="text" id="newSymbol" placeholder="Add Symbol" style="max-width: 175px;"/>
@@ -37,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div id="loginContainer" style="display: block; background-color: #646464;">
+        <div id="loginContainer" style="display: block; background-color: #2d2e4a;">
             <img src="./images/THIRD EYE_EYE ONLY.png" alt="Logo" style="width: 100px; height: auto; position: relative;
 
 /* top: 40px */

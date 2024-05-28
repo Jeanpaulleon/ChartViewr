@@ -12,8 +12,10 @@ let secretKeyStored = '';
 
 // Expose the ipcRenderer to the renderer processes securely
 contextBridge.exposeInMainWorld('electronAPI', {
-    sendContinueClicked: () => ipcRenderer.send('continue-clicked')
+    sendContinueClicked: () => ipcRenderer.send('continue-clicked'),
+    sendStartNowClicked: () => ipcRenderer.send('startnow-clicked')
 });
+
 
 contextBridge.exposeInMainWorld('api', {
     initializeAlpaca: (apiKey, secretKey, paper = false) => {
