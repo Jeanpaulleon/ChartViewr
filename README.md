@@ -4,10 +4,24 @@ For educational and demonstration purposes only, not for profit.
 
 Use of this tool requires Alpaca Developer API & Secret Keys.
 
-Node dependecies run:
 
-npm lightweight-charts
-npm alpacahq/alpaca-trade-api
-npm electron
-npm electron-forge
-npm babel
+Download Offical MacOS application:
+https://github.com/Jeanpaulleon/ChartViewr/releases/download/V1.0/Chartviewr.zip
+
+Installation
+
+Clone the repository:
+git clone https://github.com/Jeanpaulleon/ChartViewr.git
+
+Go into the directory:
+cd ChartViewr
+
+Update the node_modules packages:
+npm install
+
+Build the application:
+npm run build
+
+Launch
+Run the application:
+npm run start
