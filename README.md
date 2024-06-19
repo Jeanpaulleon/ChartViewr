@@ -8,20 +8,17 @@ Use of this tool requires Alpaca Developer API & Secret Keys.
 Download Offical MacOS application:
 https://github.com/Jeanpaulleon/ChartViewr/releases/download/V1.0/Chartviewr.zip
 
-Installation
+# Installation
 
-Clone the repository:
-git clone https://github.com/Jeanpaulleon/ChartViewr.git
+> <b>Clone the repository:</b> <br/>
+>'git clone https://github.com/Jeanpaulleon/ChartViewr.git'<br/><br/>
+> <b>Go into the directory:</b> <br/>
+>'cd ChartViewr'<br/><br/>
+> <b>Update the node_modules packages:</b> <br/>
+>'npm install'<br/> <br/>
+> <b>Update the node_modules packages:</b> <br/>
+>'npm run build'<br/> <br/>
 
-Go into the directory:
-cd ChartViewr
-
-Update the node_modules packages:
-npm install
-
-Build the application:
-npm run build
-
-Launch
-Run the application:
-npm run start
+# Launch
+> <b>Run the application:</b><br/>
+>'npm run start'<br/>
