@@ -1,0 +1,273 @@
+body,
+html {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#apiKeyForm {
+    display: block;
+
+    /* Or any other appropriate display property */
+}
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Aligns children to the start (top) */
+    align-items: center;
+
+    /* Centers children horizontally */
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+    width: 80%;
+
+    /* Responsive width */
+    max-width: 600px;
+
+    /* Maximum width */
+    height: auto;
+
+    /* Height adjusts based on content */
+}
+
+#loginContainer img {
+    width: auto;
+
+    /* Width adjusts based on content, keeping aspect ratio */
+    height: auto;
+
+    /* Height adjusts based on content, keeping aspect ratio */
+    max-width: 100%;
+
+    /* Ensures image does not overflow its container */
+    max-height: 20vh;
+
+    /* Maximum height relative to the viewport height */
+}
+
+#app {
+    display: flex;
+    width: 100%;
+
+    /* Responsive width */
+    height: 100%;
+    min-height: 0;
+
+    /* Prevents overflow issues in flex containers */
+    /* Full height */
+    flex-direction: row;
+    flex-grow: 1;
+
+    /* Allows the app to fill available space */
+    /* Start with column on smaller screens */
+    align-items: center;
+    justify-content: start;
+
+    /* Align content to start */
+}
+
+#chartContainer {
+    flex-grow: 1;
+
+    /* Takes remaining space */
+    width: 100%;
+
+    /* Minimum height, adjust as needed */
+    min-height: 250px;
+
+    /* margin: 10px */
+    resize: both;
+
+    /* Include padding and border in the width and height */
+    overflow: hidden;
+    resize: both;
+
+    /* Scrollable if content is larger than the container */
+}
+
+#watchlist {
+    display: flex;
+    width: 200px;
+    min-height: 250px;
+    background-color: #ffffff;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    position: fixed;
+    right: 0;
+    margin: 10px;
+
+    /* Pinned to the right */
+}
+
+#watchlist h3 {
+    margin-top: 0;
+}
+
+#watchlistItems li {
+    list-style-type: none;
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#watchlistItems li:hover {
+    background-color: #646464;
+}
+
+#newSymbol,
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 1025px) {
+    #app {
+        display: flex;
+        flex-direction: row;
+
+        /* or column, depending on layout */
+        height: 100%;
+
+        /* Ensure the app container takes full available height */
+    }
+
+    #watchlist {
+        position: fixed;
+
+        /* Ensure watchlist is always visible */
+        top: 90vh;
+
+        /* Align top */
+    }
+}
+
+.countdown-timer,
+.fetch-button {
+    position: fixed;
+
+    /* Fixed positioning to keep them in the same place */
+    right: 10px;
+
+    /* 10 pixels from the right */
+    background-color: #f8f9fa;
+
+    /* Light background for visibility */
+    padding: 10px 20px;
+
+    /* Padding around the text */
+    border-radius: 5px;
+
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    /* Subtle shadow for depth */
+    z-index: 1000;
+
+    /* High z-index to ensure it stays on top of other content */
+}
+
+#countdownDisplay {
+    display: none;
+    width: 170px;
+    text-align: left;
+    font-size: 17px;
+
+    /* Hide countdown display initially */
+}
+
+.countdown-timer {
+    bottom: 50px;
+
+    /* 50 pixels from the bottom */
+    font-size: 16px;
+
+    /* Adequate font size for readability */
+    color: #333;
+
+    /* Dark text color for contrast */
+}
+
+.fetch-button {
+    bottom: 10px;
+
+    /* 10 pixels from the bottom */
+    font-size: 16px;
+
+    /* Consistent font size with the countdown */
+    color: #333;
+
+    /* Dark text color for readability */
+    cursor: pointer;
+
+    /* Cursor as pointer to indicate it's clickable */
+    border: none;
+
+    /* No border for a cleaner look */
+}
+#disclaimerBanner button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#disclaimerBanner button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+button {
+    cursor: pointer;
+}

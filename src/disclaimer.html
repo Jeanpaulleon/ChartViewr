@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #ffffff;">
+    <head style="color: #c1c1c1; background-color: #ffffff;">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChartViewr</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body style="color: c1c1c1; background-color: #ffffff; display: flex; resize: both; align-self: flex-start; border-radius: 10px; border-color: #ffffff;">
+        <!-- Disclaimer Banner -->
+        <div id="disclaimerBanner" style="display: none; position: absolute; background-color: rgba(0, 0, 0, 0.8); border-radius: 10px;">
+            <div style="padding: 20px; background: white; border-radius: 10px; text-align: center; left: 1px; top: 1px; bottom: 1px; position: fixed; right: 1px; border-color: #ffffff; background-color: #ffffff;">
+                <h2>Project Disclaimer</h2>
+                <p>ChartViewr is a stock charting tool that demonstrates the integration between Tradingview’s lightweight charts and the Alpaca Markets API. It is not developed or affiliated with Tradingview or Alpaca Markets. <br>For educational and demonstration purposes only, not for profit.</p>
+                <p>Use of this tool requires Alpaca Developer API & Secret Keys.</p>
+                <button onclick="closeDisclaimer()">Continue</button>
+            </div>
+        </div>
+        <script>
+            // Function to close the disclaimer banner and notify the main process
+            function closeDisclaimer() {
+                window.electronAPI.sendContinueClicked();
+                window.close(); // Close the disclaimer window
+            }
+            
+            // Function to show the disclaimer banner on load
+            window.onload = function() {
+                document.getElementById('disclaimerBanner').style.display = 'block';
+            };
+            </script>
+            
+            
+    </body>
+</html>
