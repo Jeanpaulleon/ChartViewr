@@ -9,7 +9,7 @@ Use of this tool requires Alpaca Developer API & Secret Keys. Get keys <a href="
 Project only works with API Keys from Alpaca Markets.  Obtain keys before installing and launching. Packaged application file only works on MacOS but project can be cloned, rebuilt, and launched using command/terminal tools.
 
 # Download MacOS application:
-> <b>Click the app icon to download the signed and notarized application by Apple Developer Program:</b> <br/>
+> <b>Click the app icon to download the macOS application:</b> <br/>
 
 <a href="https://github.com/Jeanpaulleon/ChartViewr/releases/download/V1.0/Chartviewr.zip"><img width="75" alt="THIRD_EYE_EYE_ONLY" src="https://github.com/Jeanpaulleon/ChartViewr/assets/167993934/05ce8662-d5db-483c-b4a9-b8e1b227f565"></a> <br/>
 If download link doesn't work, please navigate to our Releases page <a href="https://github.com/Jeanpaulleon/ChartViewr/releases/">here</a>
